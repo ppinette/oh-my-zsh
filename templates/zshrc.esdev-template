@@ -1,0 +1,94 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="parkerpinette"
+
+# Set early to load venvwrapper plugin
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+WORKON_HOME=$HOME/virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git svn python django pip virtualenvwrapper vi-mode)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+. ~/.aliases
+
+# ES 
+alias nowdate='date +%Y%m%d%H%M'
+export EDITOR=vim
+
+#alias for YUICompressor
+export YUI_COMPRESSOR="/usr/bin/java -jar /usr/share/yui-compressor/yuicompressor.jar"
+
+er_aliases=$HOME/virtualenvs/er/repos/deployed/etc/bashrc/er_dev
+if [ -f $er_aliases ]; then
+    . $er_aliases
+fi
+
+bce_aliases=$HOME/virtualenvs/er-bce/repos/deployed/etc/bashrc/er_bce_dev
+if [ -f $bce_aliases ]; then
+    . $bce_aliases
+fi
+
+csitp_aliases=$HOME/virtualenvs/csi-tp/repos/deployed/etc/csi_tp_bashrc_dev
+if [ -f $csitp_aliases ]; then
+	. $csitp_aliases
+fi
+
+sgip_aliases=$HOME/virtualenvs/sgip/repos/deployed/etc/bashrc/devbox
+if [ -f $sgip_aliases ]; then
+	. $sgip_aliases
+fi
+
+sfpuc_aliases=$HOME/virtualenvs/sfpuc/repos/deployed/etc/bashrc/devbox
+if [ -f $sfpuc_aliases ]; then
+	. $sfpuc_aliases
+fi
+
+mea_aliases=$HOME/virtualenvs/mea/repos/deployed/etc/bashrc/devbox
+if [ -f $mea_aliases ]; then
+	. $mea_aliases
+fi
+
+asap_aliases=$HOME/virtualenvs/asap/repos/deployed/etc/bashrc/devbox
+if [ -f $asap_aliases ]; then
+    . $asap_aliases
+fi
+
+gb_aliases=/home/django/virtualenvs/gb/repos/deployed/etc/bashrc/devbox
+if [ -f $gb_aliases ]; then
+	. $gb_aliases
+fi
+
+sentry_aliases=$HOME/virtualenvs/sentry/repos/deployed/bashrc/devbox
+if [ -f $sentry_aliases ]; then
+    . $sentry_aliases
+fi
