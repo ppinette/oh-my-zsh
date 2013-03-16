@@ -14,7 +14,7 @@ function collapse_pwd {
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT='%{$fg[yellow]%}\
-$(virtualenv_info)%{$reset_color%}\
+%{$reset_color%}\
 %{$fg[green]%}%c \
 $(git_prompt_info)\
 %{$fg[red]%}%(!.#.»)%{$reset_color%} '
