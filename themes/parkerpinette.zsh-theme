@@ -11,6 +11,11 @@ function collapse_pwd {
     echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
+function git_prompt_info() {
+      ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+        echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT='%{$fg[yellow]%}\
